@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form action="{% url 'movies:update' movie.pk %}" method="POST">
+    {% csrf_token %}
+    {% comment %} 1 {% endcomment %}
+    <label for="title"></label>
+    <input type="text" id="title" name="title" value="{{ movie.title }}">
+    {% comment %} 2 {% endcomment %}
+    <label for="overview"></label>
+    <textarea name="overview" id="overview" cols="30" rows="10">{{ movie.overview }}</textarea>
+    {% comment %} 3 {% endcomment %}
+    <label for="poster_path"></label>
+    <input type="text" id="poster_path" name="poster_path" value="{{ movie.poster_path }}">
+    {% comment %} 제출 {% endcomment %}
+    <input type="submit">
+  </form>
+{% endblock content %}

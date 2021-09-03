@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="pagename">INDEX</h1>
+  <hr>
+  {% for movie in movies %}
+    <h3>제목 :
+      {{ movie.title }}</h3>
+    <h3>내용 :
+      {{ movie.overview }}</h3>
+    <h3>포스터 :
+      {{ movie.poster_path }}</h3>
+    <a href="{% url 'movies:detail' movie.pk %}">상세보기</a>
+    <hr/>
+  {% endfor %}
+{% endblock content %}

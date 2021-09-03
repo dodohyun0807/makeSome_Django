@@ -1,0 +1,51 @@
+body {
+	background-color: rgb(243, 206, 151);
+	font-family: "Noto Sans KR", sans-serif;
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	flex-flow: row, nowrap;
+	background-color: black;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 10vh;
+	min-height: 50px;
+}
+
+nav a {
+	display: flex;
+	flex-flow: row, nowrap;
+	align-items: center;
+	justify-content: center;
+	height: 70%;
+	text-decoration: none;
+	color: rgb(250, 174, 60);
+	border: 1px solid rgb(250, 174, 60);
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+form {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 50%;
+}
+
+.pagename {
+	margin-left: 10px;
+	border-bottom: 1px solid black;
+	margin: 0;
+	width: 100%;
+}
+
+.main {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 100%;
+}

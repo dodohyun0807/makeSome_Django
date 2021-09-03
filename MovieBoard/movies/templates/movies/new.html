@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="pagename">NEW</h1>
+
+  <div class="main">
+    <form action="{% url 'movies:create' %}" method="POST" class="make">
+      {% csrf_token %}
+      {% comment %} 1 {% endcomment %}
+      <label for="title">제목</label>
+      <input type="text" id="title" name="title">
+      {% comment %} 2 {% endcomment %}
+      <label for="overview">내용</label>
+      <textarea name="overview" id="overview" cols="30" rows="10"></textarea>
+      {% comment %} 3 {% endcomment %}
+      <label for="poster_path">포스터</label>
+      <input type="text" id="poster_path" name="poster_path">
+      {% comment %} 제출 {% endcomment %}
+      <input type="submit">
+    </form>
+  </div>
+{% endblock content %}
