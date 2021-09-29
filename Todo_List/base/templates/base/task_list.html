@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>ToDoList</h1>
+  <hr>
+  <a href="{% url 'base:task-create' %}">add task</a>
+
+  <form method="GET">
+    <input type='text' name='search-area' value='{{search_input}}'>
+    <input type='submit' value='search'>
+  </form>
+
+  <table>
+    <tr>
+      <th>Item</th>
+    </tr>
+    {% for task in tasks %}
+      <tr>
+        <td>{{task.title}}</td>
+        <td>
+          <a href="{% url 'base:task' task.id %}">View</a>
+          <a href="{% url 'base:task-update' task.id %}">Update</a>
+          <a href="{% url 'base:task-delete' task.id %}">Delete</a>
+        </td>
+      </tr>
+      {% empty %}
+      <h3>No items in List</h3>
+    {% endfor %}
+  </table>
+
+{% endblock content %}
