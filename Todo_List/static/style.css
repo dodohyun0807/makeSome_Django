@@ -1,0 +1,80 @@
+/* TAG */
+
+body {
+	font-family: "Noto Sans KR", sans-serif;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	padding-top: 50px;
+	width: 90%;
+	margin: auto;
+}
+
+form {
+	width: 280px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: space-evenly;
+	width: 100%;
+}
+
+form > p {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+/*  각 탬플릿별 form 레이아웃 맞추기 + 게시글 추가 및 지우는 ui구현 */
+
+/* CLASS */
+
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 500px;
+	background: linear-gradient(99deg, #eea390 0%, #eb796f 43%, #ec8c8c 100%);
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.head_bar {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 500px;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-bottom: black solid 3px;
+	border-radius: 5px;
+	background: linear-gradient(99deg, #eea390 0%, #eb796f 43%, #eb796f 100%);
+}
+
+.title_bar {
+	color: white;
+	font-size: 20px;
+}
+
+.nav_bar {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	text-decoration: none;
+}
+
+.nav_bar > a:link {
+	border: white solid 1px;
+	border-radius: 5px;
+	padding: 3px;
+	color: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+}
+
+.nav_bar > a:visited {
+	border: white solid 1px;
+	border-radius: 5px;
+	padding: 3px;
+	color: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+}
