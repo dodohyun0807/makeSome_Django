@@ -2,9 +2,8 @@
 
 
 
-	### 구조
+### 구조
 
-![list](.\list.JPG)
 
 ​	pjt04 프로젝트 - movies app 
 
